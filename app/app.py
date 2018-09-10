@@ -81,6 +81,7 @@ def most_common(lst):
 app = Flask(__name__)
 app.secret_key = 'ThisIsSecret'
 
+
 def countLetters(word):
     count = 0
     for c in word:
@@ -633,6 +634,7 @@ def plotpie(par_precision, par_accuracy, par_completeness, par_neutrality, par_r
 #return send_file(img, mimetype='image/png')
 
 if __name__ == '__main__':
+    app.run(debug=True)
 #~ #    app.run(debug=True)
 #    app.run(threaded=True, host="0.0.0.0", port=80)
 #s	app.run(processes=3)
@@ -642,8 +644,7 @@ if __name__ == '__main__':
 
         
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
 #    app.run(threaded=True)
 #app.run(host='127.0.0.1')
     #app.run(host='0.0.0.0')
