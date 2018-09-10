@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-https://github.com/mbr/flask-bootstrap.git
-form to Database
-Vanaf 70 naar multi
-"""
+
 import re
 import pandas as pd
 import functools
@@ -69,6 +65,13 @@ from flask import Markup
 from markupsafe import Markup
 
 from matplotlib import colors as mcolors
+
+
+app = Flask(__name__)
+app.secret_key = 'ThisIsSecret'
+if __name__ == '__main__':
+    app.run(debug=True)
+
 def conv(s):
     try:
        return int(s)
@@ -78,8 +81,6 @@ def conv(s):
 def most_common(lst):
     return max(set(lst), key=lst.count)
 
-app = Flask(__name__)
-app.secret_key = 'ThisIsSecret'
 
 
 def countLetters(word):
@@ -633,8 +634,7 @@ def plotpie(par_precision, par_accuracy, par_completeness, par_neutrality, par_r
     #img.seek(0)
 #return send_file(img, mimetype='image/png')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
 #~ #    app.run(debug=True)
 #    app.run(threaded=True, host="0.0.0.0", port=80)
 #s	app.run(processes=3)
