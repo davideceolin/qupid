@@ -10,7 +10,7 @@ from flask import Flask, send_from_directory
 from multiprocessing import Process
 from goose3 import Goose
 from textblob import TextBlob
-from textatistic import Textatistic
+#from textatistic import Textatistic
 import urllib.request
 import re
 import os
