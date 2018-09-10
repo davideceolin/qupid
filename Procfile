@@ -1,1 +1,1 @@
-web: gunicorn gettingstarted.wsgil
+web: gunicorn app:app --log-file -
