@@ -5,7 +5,7 @@ import re
 import csv
 import os
 from math import sqrt
-from hyphen import Hyphenator
+from hyphen.hyphenator import Hyphenator
 
 
 class EasyWords(object):
