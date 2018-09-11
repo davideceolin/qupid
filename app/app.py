@@ -10,7 +10,7 @@ from flask import Flask, send_from_directory
 from multiprocessing import Process
 from goose3 import Goose
 from textblob import TextBlob
-#from textatistic import Textatistic
+from textatistic.textatistic import Textatistic
 import urllib.request
 import re
 import os
@@ -25,7 +25,6 @@ from nltk.tokenize import RegexpTokenizer
 from nltk.stem.porter import PorterStemmer
 from nltk import word_tokenize
 from nltk.corpus import stopwords
-import nltk
 import nltk, string
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.tokenize import word_tokenize
@@ -45,9 +44,7 @@ import json
 from flask import Flask, render_template, request, redirect, session, flash, url_for, send_file, request, render_template
 import os
 import unicodedata
-import pandas as pd
 import time
-from flask import send_file
 import urllib
 from MagicGoogle import MagicGoogle
 from multiprocessing import Pool, cpu_count
@@ -57,11 +54,10 @@ import time
 import pandas as pd
 from joblib import Parallel, delayed
 import multiprocessing
-from flask import Flask, send_from_directory
+from flask import Flask, send_from_directory, send_file, Markup
 from multiprocessing import Process
 import matplotlib; matplotlib.use('Agg');
 import matplotlib.pyplot as plt,mpld3
-from flask import Markup
 from markupsafe import Markup
 
 from matplotlib import colors as mcolors
