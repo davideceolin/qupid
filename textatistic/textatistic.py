@@ -7,7 +7,6 @@ import os
 from math import sqrt
 from hyphen.hyphenator import Hyphenator
 
-
 class EasyWords(object):
     """Object containing Dale-Chall list of easy words."""
     
