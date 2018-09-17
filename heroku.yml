@@ -1,4 +1,7 @@
 setup:
   config: {}
 build:
-  languages: []
+  languages:
+    - python
+run:
+    web: gunicorn -b 0.0.0.0:8000 --access-logfile --reload "app:app"
