@@ -12,5 +12,3 @@ services:
       PYTHONUNBUFFERED: 'true'
     volumes:
       - '.:/app'
-    ports:
-      - '8000:8000'
