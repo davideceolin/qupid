@@ -3,45 +3,45 @@
 
 from collections import Counter
 from flask import Flask, render_template, request, redirect, session, flash, url_for, send_file, request, render_template, send_from_directory, Markup
-#import functools
-#import glob
-#import gensim
-#from gensim import corpora, models
-#from gensim.summarization import keywords
-#from goose3 import Goose
-#from joblib import Parallel, delayed
-#import json
-#from MagicGoogle import MagicGoogle
-#from markupsafe import Markup
-#import matplotlib; matplotlib.use('Agg');
-#from matplotlib import colors as mcolors
-#import matplotlib.pyplot as plt,mpld3
-#import multiprocessing
+import functools
+import glob
+import gensim
+from gensim import corpora, models
+from gensim.summarization import keywords
+from goose3 import Goose
+from joblib import Parallel, delayed
+import json
+from MagicGoogle import MagicGoogle
+from markupsafe import Markup
+import matplotlib; matplotlib.use('Agg');
+from matplotlib import colors as mcolors
+import matplotlib.pyplot as plt,mpld3
+import multiprocessing
 from multiprocessing import Process, Pool, cpu_count
-#import nltk
-#from nltk import word_tokenize
-#from nltk.corpus import stopwords
-#from nltk.stem.porter import PorterStemmer
-#from nltk.tokenize import RegexpTokenizer, word_tokenize
-#import numpy as np
-#import os
+import nltk
+from nltk import word_tokenize
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
+from nltk.tokenize import RegexpTokenizer, word_tokenize
+import numpy as np
+import os
 import os.path
 import pandas as pd
 import pickle
 from queue import Queue
 import re
 import requests
-#from sklearn.ensemble import RandomForestRegressor
-#from sklearn.feature_extraction.text import TfidfVectorizer
-#from sklearn.model_selection import train_test_split
-#from sklearn.multioutput import MultiOutputRegressor
-#import string
-#from textblob import TextBlob
-#from textatistic import Textatistic
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.model_selection import train_test_split
+from sklearn.multioutput import MultiOutputRegressor
+import string
+from textblob import TextBlob
+from textatistic import Textatistic
 from threading import Thread
-#import time
-#from twitterscraper import query_tweets
-#import unicodedata
+import time
+from twitterscraper import query_tweets
+import unicodedata
 import urllib
 import urllib.request
 from urllib.parse import urlsplit
