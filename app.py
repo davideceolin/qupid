@@ -1,70 +1,53 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import re
-import pandas as pd
+from collections import Counter
+from flask import Flask, render_template, request, redirect, session, flash, url_for, send_file, request, render_template, send_from_directory, Markup
 import functools
-from joblib import Parallel, delayed
-import multiprocessing
-from flask import Flask, send_from_directory
-from multiprocessing import Process
-from goose3 import Goose
-from textblob import TextBlob
-from textatistic import Textatistic
-import urllib.request
-import re
-import os
-import time
 import glob
-import pandas as pd
-import requests
-from urllib.parse import urlsplit
-from twitterscraper import query_tweets
+import gensim
+from gensim import corpora, models
 from gensim.summarization import keywords
-from nltk.tokenize import RegexpTokenizer
-from nltk.stem.porter import PorterStemmer
+from goose3 import Goose
+from joblib import Parallel, delayed
+import json
+from MagicGoogle import MagicGoogle
+from markupsafe import Markup
+import matplotlib; matplotlib.use('Agg');
+from matplotlib import colors as mcolors
+import matplotlib.pyplot as plt,mpld3
+import multiprocessing
+from multiprocessing import Process, Pool, cpu_count
+import nltk
 from nltk import word_tokenize
 from nltk.corpus import stopwords
-import nltk
-import nltk, string
-from sklearn.feature_extraction.text import TfidfVectorizer
-from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
-from collections import Counter
-import pickle
-import numpy
-from gensim import corpora, models
-import gensim
+from nltk.stem.porter import PorterStemmer
+from nltk.tokenize import RegexpTokenizer, word_tokenize
 import numpy as np
+import os
+import os.path
+import pandas as pd
+import pickle
+from queue import Queue
+import re
+import requests
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.multioutput import MultiOutputRegressor
-import os.path
-import time
-import json
-from flask import Flask, render_template, request, redirect, session, flash, url_for, send_file, request, render_template
-import os
-import unicodedata
-import pandas as pd
-import time
-from flask import send_file
-import urllib
-from MagicGoogle import MagicGoogle
-from multiprocessing import Pool, cpu_count
-from queue import Queue
+import string
+from textblob import TextBlob
+from textatistic import Textatistic
 from threading import Thread
 import time
-import pandas as pd
-from joblib import Parallel, delayed
-import multiprocessing
-from flask import Flask, send_from_directory
-from multiprocessing import Process
-import matplotlib; matplotlib.use('Agg');
-import matplotlib.pyplot as plt,mpld3
-from flask import Markup
-from markupsafe import Markup
+from twitterscraper import query_tweets
+import unicodedata
+import urllib
+import urllib.request
+from urllib.parse import urlsplit
 
-from matplotlib import colors as mcolors
+
+
 
 
 app = Flask(__name__)
