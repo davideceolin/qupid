@@ -31,18 +31,18 @@ import pickle
 from queue import Queue
 import re
 import requests
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.model_selection import train_test_split
-from sklearn.multioutput import MultiOutputRegressor
-import string
-from textblob import TextBlob
-from textatistic import Textatistic
+#from sklearn.ensemble import RandomForestRegressor
+#from sklearn.feature_extraction.text import TfidfVectorizer
+#from sklearn.model_selection import train_test_split
+#from sklearn.multioutput import MultiOutputRegressor
+#import string
+#from textblob import TextBlob
+#from textatistic import Textatistic
 from threading import Thread
-import time
-from twitterscraper import query_tweets
-import unicodedata
-#import urllib
+#import time
+#from twitterscraper import query_tweets
+#import unicodedata
+import urllib
 import urllib.request
 from urllib.parse import urlsplit
 
