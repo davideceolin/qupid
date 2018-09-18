@@ -3,27 +3,27 @@
 
 from collections import Counter
 from flask import Flask, render_template, request, redirect, session, flash, url_for, send_file, request, render_template, send_from_directory, Markup
-import functools
-import glob
+#import functools
+#import glob
 #import gensim
-from gensim import corpora, models
-from gensim.summarization import keywords
-from goose3 import Goose
-from joblib import Parallel, delayed
-import json
-from MagicGoogle import MagicGoogle
-from markupsafe import Markup
+#from gensim import corpora, models
+#from gensim.summarization import keywords
+#from goose3 import Goose
+#from joblib import Parallel, delayed
+#import json
+#from MagicGoogle import MagicGoogle
+#from markupsafe import Markup
 #import matplotlib; matplotlib.use('Agg');
 #from matplotlib import colors as mcolors
 #import matplotlib.pyplot as plt,mpld3
 #import multiprocessing
 from multiprocessing import Process, Pool, cpu_count
 #import nltk
-from nltk import word_tokenize
-from nltk.corpus import stopwords
-from nltk.stem.porter import PorterStemmer
-from nltk.tokenize import RegexpTokenizer, word_tokenize
-import numpy as np
+#from nltk import word_tokenize
+#from nltk.corpus import stopwords
+#from nltk.stem.porter import PorterStemmer
+#from nltk.tokenize import RegexpTokenizer, word_tokenize
+#import numpy as np
 #import os
 import os.path
 import pandas as pd
