@@ -13,9 +13,9 @@ from joblib import Parallel, delayed
 import json
 from MagicGoogle import MagicGoogle
 from markupsafe import Markup
-import matplotlib; matplotlib.use('Agg');
-from matplotlib import colors as mcolors
-import matplotlib.pyplot as plt,mpld3
+#import matplotlib; matplotlib.use('Agg');
+#from matplotlib import colors as mcolors
+#import matplotlib.pyplot as plt,mpld3
 #import multiprocessing
 from multiprocessing import Process, Pool, cpu_count
 #import nltk
