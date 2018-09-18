@@ -298,13 +298,12 @@ def get_term():
             result = pickle_model.predict(newX)
         except:
             result = np.array([0,0,0,0,0,0,0,0])
-        print (result)
         px2 = result.reshape((-1, 8))
-        print(px2)
         dffres = pd.DataFrame(
             {'OverallQuality': px2[:, 0], 'accuracy': px2[:, 1], 'completeness': px2[:, 2], 'neutrality': px2[:, 3],
              'relevance': px2[:, 4], 'trustworthiness': px2[:, 5], 'readability': px2[:, 6], 'precision': px2[:, 7]})
              #print(dffres)
+        print("Dffres")
         print(dffres)
         for row in dffres:
             print(dffres[row])
