@@ -4,7 +4,7 @@ services:
   app:
     build: .
     command: >
-      gunicorn -b 0.0.0.0:$PORT
+      gunicorn -b 0.0.0.0:8000
       --access-logfile -
       --reload
       "app:app"
@@ -12,3 +12,5 @@ services:
       PYTHONUNBUFFERED: 'true'
     volumes:
       - '.:/app'
+    ports:
+      - '8000:8000'

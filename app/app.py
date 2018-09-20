@@ -325,8 +325,8 @@ def get_term():
         print(dffres)
         for row in dffres:
             print(dffres[row])
-        dffres2 = {row:plotpie(dffres[row][7],dffres[row][1],dffres[row][2],dffres[row][3],dffres[row][4],dffres[row][6],dffres[row][5])  for row in dffres} #
-#dffres2 = {'a':plotpie(1,2,3,4,5,6,7)}
+        #dffres2 = {row:plotpie(dffres[row][7],dffres[row][1],dffres[row][2],dffres[row][3],dffres[row][4],dffres[row][6],dffres[row][5])  for row in dffres} #
+        dffres2 = {'a':plotpie(1,2,3,4,5,6,7)}
         pd.set_option('display.max_colwidth', -1)
         #print(dffres3)
         #print(type(dffres2))

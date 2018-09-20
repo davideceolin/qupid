@@ -5,7 +5,7 @@ goose3
 textblob
 textatistic
 twitterscraper
-magicgoogle
+google
 gensim
 sklearn
 matplotlib

@@ -8,10 +8,10 @@ import glob
 import gensim
 from gensim import corpora, models
 from gensim.summarization import keywords
+from googlesearch import search
 from goose3 import Goose
 from joblib import Parallel, delayed
 import json
-from MagicGoogle import MagicGoogle
 from markupsafe import Markup
 import matplotlib; matplotlib.use('Agg');
 from matplotlib import colors as mcolors
@@ -46,6 +46,7 @@ import urllib
 import urllib.request
 from urllib.parse import urlsplit
 
+pd.set_option('display.max_columns', None)
 app = Flask(__name__)
 app.secret_key = 'ThisIsSecret'
 if __name__ == '__main__':
@@ -280,11 +281,11 @@ def get_term():
         tag = request.form['srch-term']
         tt = tag
 
-        mg = MagicGoogle()
+#mg = MagicGoogle()
         lijst = []
         #tt = 'Donald Trump'
-        search = str(tt+' language:english file:html')
-        for url in mg.search_url(query=search):
+        s = str(tt+' language:english file:html')
+        for url in search(s, stop=5):
             lijst.append(url)
 
         df = pd.DataFrame({'url': lijst})
@@ -300,14 +301,12 @@ def get_term():
             result = np.array([0,0,0,0,0,0,0,0])
         px2 = result.reshape((-1, 8))
         dffres = pd.DataFrame(
-            {'OverallQuality': px2[:, 0], 'accuracy': px2[:, 1], 'completeness': px2[:, 2], 'neutrality': px2[:, 3],
-             'relevance': px2[:, 4], 'trustworthiness': px2[:, 5], 'readability': px2[:, 6], 'precision': px2[:, 7]})
+            {'OverallQuality': px2[:, 0], 'accuracy': px2[:, 1], 'completeness': px2[:, 2], 'neutrality': px2[:, 3],'relevance': px2[:, 4], 'trustworthiness': px2[:, 5], 'readability': px2[:, 6], 'precision': px2[:, 7]})
              #print(dffres)
         print("Dffres")
         print(dffres)
-        for row in dffres:
-            print(dffres[row])
-        dffres2 = {row:plotpie(dffres[row][7],dffres[row][1],dffres[row][2],dffres[row][3],dffres[row][4],dffres[row][6],dffres[row][5])  for row in dffres} #
+        #       for row in dffres.iterrows():
+        dffres2 = {row.name:plotpie(row[7],row[1],row[2],row[3],row[4],row[6],row[5])  for index,row in dffres.iterrows()} #
 #dffres2 = {'a':plotpie(1,2,3,4,5,6,7)}
         pd.set_option('display.max_colwidth', -1)
         #print(dffres3)
